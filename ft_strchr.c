@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 11:20:50 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/07 18:25:22 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 13:14:45 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == (char) c)
+		if (*s == (unsigned char) c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == 0)
+	if (*s == (unsigned char) c)
 		return ((char *)s);
 	return (NULL);
 }
@@ -29,5 +29,5 @@ char	*ft_strchr(const char *s, int c)
 int main()
 {
 	char *ch = ft_strchr("hello", '\0');
-	printf("Result: %p\n", ch);
+	printf("Result: %p, Value: %c\n", ch, *(ch - 2));
 } */
