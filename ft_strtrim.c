@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:12:04 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 14:33:22 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 15:31:36 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char const	*start;
 	char const	*end;
 
+	if (!s1 || !set)
+		return (NULL);
 	if (*s1 == '\0')
 		return (empty_string());
 	while (check_set(*s1, set) && *s1)

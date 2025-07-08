@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:40:13 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/07 14:23:18 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 15:31:59 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ char	**ft_split(char const *s, char c)
 	char	**copy;
 	int		cw;
 
+	if (!s)
+		return (NULL);
 	res = (char **)malloc((_size(s, c) + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);

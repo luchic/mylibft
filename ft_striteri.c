@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:51:49 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/04 16:20:02 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 15:35:06 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	size_t	i;
 	size_t	len;
 
+	if (!f || !s)
+		return ;
 	i = 0;
 	len = ft_strlen(s);
 	while (i < len)
