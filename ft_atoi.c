@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 20:49:32 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 15:19:59 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 15:46:28 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ int	ft_atoi(const char *str)
 	return (_atoi(str));
 }
 
-
 /* 
 #include <stdio.h>
 #include <stdlib.h>
@@ -63,7 +62,8 @@ void	ft_atoi_tests(char *cases[])
 		std = atoi(*cases);
 		if (repl != std)
 		{
-			printf("Test feild: Value: %s | Res_repl: %d | Res_std: %d\n", *cases, repl, std);
+			printf(
+	"Test feild: Value: %s | Res_repl: %d | Res_std: %d\n", *cases, repl, std);
 		}
 		else
 		{

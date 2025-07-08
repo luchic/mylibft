@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:12:04 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 15:31:36 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 15:45:52 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (empty_string());
 	while (*s1)
 		s1++;
-	while (check_set(*(s1 - 1), set) && s1 - 1!= start)
+	while (check_set(*(s1 - 1), set) && s1 - 1 != start)
 		s1--;
 	end = s1;
 	res = (char *)ft_calloc(end - start + 1, sizeof(char));
@@ -60,7 +60,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 // #include <string.h>
 // int main()
 // {
-// 	char *s1 = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
+// 	char *s1 = 
+//"   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
 // 	char *s2 = "Hello \t  Please\n Trim me !";
 
 // 	char *res = ft_strtrim(s1, " \n\t");
@@ -68,6 +69,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 // 	if(!strcmp(s2, res))
 // 		printf( "Test passed: Strtrim result is correct.\n" );
 // 	else
-// 		printf( "Test failed: Strtrim result is incorrect. Expected: '%s', Got: '%s'\n" , s2, res);
+// 		printf( "Test failed: Strtrim
+// result is incorrect. Expected: '%s', Got: '%s'\n" , s2, res);
 // 	printf("Strtrim: '%d'\n", res[strlen(res)]);
 // }

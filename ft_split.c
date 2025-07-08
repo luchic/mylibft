@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:40:13 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 15:31:59 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 15:44:59 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,5 @@ char	**ft_split(char const *s, char c)
 		copy++;
 		s += cw;
 	}
-	*copy = NULL;
-	return (res);
+	return (*copy = NULL, res);
 }

@@ -6,12 +6,11 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 19:16:21 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 14:08:00 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 15:46:13 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 /*
 	I've noticed when I make like this(byte is unsigned char): byte << 24,
