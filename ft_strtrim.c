@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:12:04 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/07 20:57:22 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 14:33:22 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,7 @@ static int	check_set(char ch, char const *set)
 
 static char	*empty_string(void)
 {
-	char	*res;
-
-	res = (char *)malloc(sizeof(char) * 1);
-	if (!res)
-		return (NULL);
-	res[0] = '\0';
-	return (res);
+	return (ft_strdup(""));
 }
 
 char	*ft_strtrim(char const *s1, char const *set)

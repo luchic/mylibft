@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:03:05 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/04 19:37:22 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 14:31:02 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
-	join = (char *)malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	join = (char *)ft_calloc((len_s1 + len_s2 + 1), sizeof(char));
 	if (!join)
 		return (NULL);
 	ft_strlcpy(join, s1, len_s1 + len_s2 + 1);
