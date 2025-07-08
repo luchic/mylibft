@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 19:33:38 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/07 13:13:54 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 14:29:33 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,42 +66,3 @@ void	*ft_memcpy(void *restrict dst,
 	}
 	return (dst);
 }
-
-// void	*ft_memcpy_(void *restrict dst, const void *restrict src, size_t n)
-// {
-// 	size_t				i;
-// 	unsigned char		*byte_dst;
-// 	const unsigned char	*byte_src;
-
-// 	if (dst == NULL && src == NULL)
-// 		return (NULL);
-// 	i = 0;
-// 	byte_dst = dst;
-// 	byte_src = src;
-// 	while (i < n)
-// 	{
-// 		*(byte_dst + i) = *(byte_src + i);
-// 		i++;
-// 	}
-// 	return (dst);
-// }
-
-// #include <stdio.h>
-
-// int main()
-// {
-// 	char dst[50] = "-----------------------------";
-// 	char *src = "12345678abcdefgh";
-// 	unsigned long *arr;
-
-// 	arr = (unsigned long *)dst;
-// 	long tmp = get_cur_long((unsigned char *)src, 0);
-// 	*arr &= 0;
-// 	*arr |= tmp;
-// 	arr++;
-// 	tmp = get_cur_long((unsigned char *)src, 8);
-// 	*arr &= 0;
-// 	*arr |= tmp;
-// 	printf("Copied string: %s\n", dst); // Should print "Hello, World!"
-// 	return 0;
-// }
