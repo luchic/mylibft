@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/07/07 18:01:28 by nluchini         ###   ########.fr        #
+#    Updated: 2025/07/08 15:05:51 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,10 +27,10 @@ CC_FLAGS = -Wall -Wextra -Werror -std=c99
 CC = cc
 
 # Tests
-TEST_NAME = test.out
+# TEST_NAME = test.out
 
-SRC_TESTS = $(wildcard tests/*.c)
-OBJ_TESTS = $(SRC_TESTS:.c=.o)
+# SRC_TESTS = $(wildcard tests/*.c)
+# OBJ_TESTS = $(SRC_TESTS:.c=.o)
 
 all : $(OBJ_FIlES)
 	ar rcs $(NAME) $(OBJ_FIlES)
@@ -41,8 +41,8 @@ $(NAME) : $(OBJ_FIlES)
 bonus : $(OBJ_ALL_FILES)
 	ar rcs $(NAME) $(OBJ_ALL_FILES)
 
-debug : $(SRC_TESTS) $(SRC_FIlES)
-	$(CC) -g $^ -o $(TEST_NAME)
+# debug : $(SRC_TESTS) $(SRC_FIlES)
+# 	$(CC) -g $^ -o $(TEST_NAME)
 
 
 %.o : %.c
@@ -51,9 +51,9 @@ debug : $(SRC_TESTS) $(SRC_FIlES)
 
 re : fclean all
 
-clean_debug: fclean
-	rm -fr $(TEST_NAME).dSYM
-	rm -f $(TEST_NAME)
+# clean_debug: fclean
+# 	rm -fr $(TEST_NAME).dSYM
+# 	rm -f $(TEST_NAME)
 
 fclean : clean
 	rm -f $(NAME) 
@@ -61,4 +61,4 @@ fclean : clean
 clean : 
 	rm -f $(OBJ_FIlES)
 
-.PHONY: all clean fclean re clean_debug debug bonus
+.PHONY: all clean fclean re bonus # clean_debug debug
