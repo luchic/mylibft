@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:46:42 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/05 12:48:52 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 13:47:41 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_itoa(int n)
 	size_t	size;
 
 	size = size_string(n);
-	res = (char *)malloc(sizeof(char) * (size + 1));
+	res = (char *)ft_calloc((size + 1), sizeof(char));
 	if (!res)
 		return (NULL);
 	if (n == 0)
