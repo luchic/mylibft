@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:24:52 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/07 14:23:18 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 18:58:12 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
  * @param  n: Number of copied bytes.
  * @retval The ft_memcpy() function returns the original value of dst.
  */
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 /**
  * @brief  The ft_memmove() function copies len bytes from string src to
@@ -189,8 +189,7 @@ char	*ft_strdup(const char *s1);
  *   If the return value is >= dstsize, the output string has been truncated.
  *   It is the caller's responsibility to handle this.
  */
-size_t	ft_strlcat(char *restrict dest,
-			const char *restrict src, size_t dstsize);
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize);
 
 /**
  * @brief  The ft_strlcpy() functions copy strings with the same
@@ -211,8 +210,7 @@ size_t	ft_strlcat(char *restrict dest,
  *   If the return value is >= dstsize, the output string has been truncated.
  *   It is the caller's responsibility to handle this.
  */
-size_t	ft_strlcpy(char *restrict dest,
-			const char *restrict src, size_t dstsize);
+size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize);
 
 /**
  * @brief  The ft_strlen() function computes the length of the string s.

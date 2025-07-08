@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 19:33:38 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 15:21:01 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 18:59:00 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ static size_t	fill_long(void *dst, void *src, size_t len)
 	return (i);
 }
 
-void	*ft_memcpy(void *restrict dst,
-	const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t				i;
 	unsigned char		*byte_dst;

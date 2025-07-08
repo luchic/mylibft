@@ -6,14 +6,13 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 10:55:21 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 15:09:00 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/08 18:58:41 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dest,
-		const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 {
 	size_t	counter;
 	size_t	size_dest;
