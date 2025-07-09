@@ -6,20 +6,22 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:40:13 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 15:44:59 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/09 10:59:40 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static int	_size(const char *str, char del)
+static int	ft_size(const char *str, char del)
 {
 	int	strings;
 	int	c;
 
 	strings = 0;
 	c = 0;
+	if (*str == '\0')
+		return (0);
 	if (*str != del)
 		strings++;
 	while (str[c])
@@ -31,7 +33,7 @@ static int	_size(const char *str, char del)
 	return (strings);
 }
 
-static int	wl(const char *str, char del)
+static int	ft_wlen(const char *str, char del)
 {
 	int	c;
 
@@ -44,7 +46,7 @@ static int	wl(const char *str, char del)
 	return (c);
 }
 
-static char	*str_cp(const char *str, int n)
+static char	*ft_strndup(const char *str, int n)
 {
 	char	*cpy;
 	int		count;
@@ -62,31 +64,75 @@ static char	*str_cp(const char *str, int n)
 	return (cpy);
 }
 
+void	*ft_free(char **res, size_t num)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < num)
+	{
+		free(res[i]);
+		i++;
+	}
+	free(res);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
-	char	**copy;
-	int		cw;
+	size_t	i;
+	int		wlen;
 
 	if (!s)
 		return (NULL);
-	res = (char **)malloc((_size(s, c) + 1) * sizeof(char *));
+	res = (char **)malloc((ft_size(s, c) + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
-	copy = res;
+	i = 0;
 	while (*s)
 	{
-		cw = wl(s, c);
+		wlen = ft_wlen(s, c);
 		if (*s == c)
 		{
 			s++;
 			continue ;
 		}
-		*copy = str_cp(s, cw);
-		if (!*copy)
-			return (copy);
-		copy++;
-		s += cw;
+		res[i] = ft_strndup(s, wlen);
+		if (!res[i])
+			return (ft_free(res, i));
+		i++;
+		s += wlen;
 	}
-	return (*copy = NULL, res);
+	return (res[i] = NULL, res);
 }
+
+/* #include <stdlib.h>
+#include <stdio.h>
+void leaks(void)
+{
+	system("leaks a.out");
+}
+
+void ft_print(char **res)
+{
+	if (!res)
+		return ;
+	while (*res)
+	{
+		printf("%s\n", *res);
+		res++;
+	}
+	printf("Adress: %p, Value %p\n", res, *res);
+}
+
+int main()
+{
+	char *str = "Hello!";
+	char del = ' ';
+	char **res;
+	res = ft_split(str, del);
+
+	atexit(leaks);
+	ft_print(res);
+} */
