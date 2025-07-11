@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/07/10 13:58:33 by nluchini         ###   ########.fr        #
+#    Updated: 2025/07/11 10:19:41 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,8 +66,6 @@ OBJ_BONUS = $(SRC_BONUS:.c=.o)
 # Compiler and flags
 CC_FLAGS = -Wall -Wextra -Werror
 CC = cc
-
-$(info $(SRC_FIlES))
 
 all : $(OBJ_FIlES)
 	ar rcs $(NAME) $(OBJ_FIlES)
