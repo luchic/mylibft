@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:40:13 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/11 10:18:02 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/11 10:31:27 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char	*ft_strndup(const char *str, int n)
 	return (cpy);
 }
 
-join void	*ft_free(char **res, size_t num)
+static void	*ft_free(char **res, size_t num)
 {
 	size_t	i;
 
