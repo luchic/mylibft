@@ -6,14 +6,14 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 21:04:40 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/07 20:55:09 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/11 13:35:21 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static size_t	min(size_t a, size_t b)
+static size_t	ft_min(size_t a, size_t b)
 {
 	if (a > b)
 		return (b);
@@ -31,7 +31,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	len_s = ft_strlen(s);
 	if (start > len_s)
 		return (ft_strdup(""));
-	cpy = (char *)ft_calloc(min(len_s - start, len) + 1, sizeof(char));
+	cpy = (char *)ft_calloc(ft_min(len_s - start, len) + 1, sizeof(char));
 	if (!cpy)
 		return (NULL);
 	i = 0;
