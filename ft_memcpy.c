@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 19:33:38 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 18:59:00 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/11 10:32:16 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	unsigned char		*byte_dst;
 	const unsigned char	*byte_src;
 
-	if (dst == NULL && src == NULL)
+	if (!dst && !src)
 		return (NULL);
 	byte_dst = dst;
 	byte_src = src;
