@@ -52,7 +52,7 @@ SRC_BONUS = 	ft_lstadd_back_bonus.c \
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 # Compiler and flags
-CC_FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 CC = cc
 
 all : $(OBJ_FIlES)
@@ -63,9 +63,6 @@ $(NAME) : $(OBJ_FIlES)
 
 bonus : $(OBJ_FIlES) $(OBJ_BONUS)
 	ar rcs $(NAME) $(OBJ_FIlES) $(OBJ_BONUS)
-
-%.o : %.c
-	$(CC) $(CC_FLAGS) -o $@ -c $<
 
 re : fclean all
 
