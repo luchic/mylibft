@@ -6,14 +6,14 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:40:13 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/11 10:31:27 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/11 13:38:30 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static int	ft_size(const char *str, char del)
+static int	ft_count_word(const char *str, char del)
 {
 	int	strings;
 	int	c;
@@ -86,7 +86,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	res = (char **)malloc((ft_size(s, c) + 1) * sizeof(char *));
+	res = (char **)malloc((ft_count_word(s, c) + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
 	i = 0;
