@@ -6,12 +6,10 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 09:44:35 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/11 14:04:12 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/13 18:54:17 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <limits.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
