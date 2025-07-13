@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 09:44:35 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 16:01:24 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/13 18:56:53 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if ((count && size > ULONG_MAX / count))
 	{
+		errno = ENOMEM;
 		return (NULL);
 	}
 	total = count * size;
