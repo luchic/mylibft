@@ -55,8 +55,7 @@ OBJ_BONUS = $(SRC_BONUS:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 CC = cc
 
-all : $(OBJ_FIlES)
-	ar rcs $(NAME) $(OBJ_FIlES)
+all : $(NAME)
 
 $(NAME) : $(OBJ_FIlES)
 	ar rcs $(NAME) $(OBJ_FIlES)
