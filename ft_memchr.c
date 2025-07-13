@@ -6,11 +6,10 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 11:29:02 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 10:53:54 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/13 18:27:20 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)

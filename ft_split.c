@@ -6,11 +6,10 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:40:13 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/11 13:38:30 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/13 18:28:33 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static int	ft_count_word(const char *str, char del)

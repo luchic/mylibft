@@ -6,11 +6,10 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:57:32 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/06 17:55:39 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/13 18:28:08 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 static void	putnbr(long nb, int fd)

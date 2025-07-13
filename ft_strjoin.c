@@ -6,11 +6,10 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:03:05 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 15:31:00 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/13 18:28:54 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

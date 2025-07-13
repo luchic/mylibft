@@ -6,11 +6,10 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:46:42 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 13:47:41 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/13 18:26:58 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static size_t	size_string(int n)

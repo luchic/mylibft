@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:24:52 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 18:58:12 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/13 18:29:59 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
+# include <limits.h>
+# include <unistd.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
@@ -160,7 +164,6 @@ char	*ft_strchr(const char *s, int c);
  *   of the string s1, does the copy, and returns a pointer to it.
  *   The pointer may subsequently be used as an argument to the function
  *   free(). If insufficient memory is available,
- *   NULL is returned and errno is set to ENOMEM.
  * @param  s1: String that will be copied.
  * @retval Return pointer to the new string.
  */

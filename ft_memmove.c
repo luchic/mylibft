@@ -6,11 +6,10 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 09:35:21 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/05 13:46:13 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/13 18:27:52 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdint.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)

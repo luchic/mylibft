@@ -6,11 +6,10 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:12:04 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 15:45:52 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/13 18:29:17 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static int	check_set(char ch, char const *set)
