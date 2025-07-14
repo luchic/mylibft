@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:24:52 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/13 13:42:02 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/14 10:07:37 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -352,11 +352,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 /**
-	TODO: What should return put function?? size_t or int??
-
- */
- 
-/**
  * @brief  Outputs the character ’c’ to the specified file descriptor.
  * @param  c:  The character to output.
  * @param  fd: The file descriptor on which to write.
@@ -406,6 +401,22 @@ int		ft_putlnbr_fd(long n, int fd);
  * @retval The number of written characters or -1 if an error.
  */
 int		ft_putnbr_fd(int n, int fd);
+
+/**
+ * @brief  Return the minimal number of given two.
+ * @param  a: The first number.
+ * @param  b: The second number.
+ * @retval Minimal number.
+ */
+int		ft_min(int a, int b);
+
+/**
+ * @brief  Return the maximal number of given two.
+ * @param  a: The first number.
+ * @param  b: The second number.
+ * @retval Maximal number.
+ */
+int		ft_max(int a, int b);
 
 /**
  * @brief  Allocates memory (using malloc(3)) and returns a new node.
