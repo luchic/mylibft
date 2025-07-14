@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
+#    Updated: 2025/07/12 20:24:39 by nluchini         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 # Mandatory part of the project
@@ -19,6 +31,7 @@ SRC_FIlES =		ft_atoi.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
 				ft_putstr_fd.c \
+				ft_putnstr_fd.c \
 				ft_split.c \
 				ft_strchr.c \
 				ft_strdup.c \
@@ -52,16 +65,20 @@ SRC_BONUS = 	ft_lstadd_back_bonus.c \
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 # Compiler and flags
-CFLAGS = -Wall -Wextra -Werror
+CC_FLAGS = -Wall -Wextra -Werror
 CC = cc
 
-all : $(NAME)
+all : $(OBJ_FIlES)
+	ar rcs $(NAME) $(OBJ_FIlES)
 
 $(NAME) : $(OBJ_FIlES)
 	ar rcs $(NAME) $(OBJ_FIlES)
 
 bonus : $(OBJ_FIlES) $(OBJ_BONUS)
 	ar rcs $(NAME) $(OBJ_FIlES) $(OBJ_BONUS)
+
+%.o : %.c
+	$(CC) $(CC_FLAGS) -o $@ -c $<
 
 re : fclean all
 

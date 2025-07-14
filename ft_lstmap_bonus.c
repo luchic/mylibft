@@ -6,10 +6,11 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/06 15:01:12 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/13 18:27:15 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/14 09:28:57 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 static void	*ft_free(t_list **list, void *content, void (*del)(void *))
