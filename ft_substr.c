@@ -6,18 +6,11 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 21:04:40 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/13 18:29:21 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/14 11:05:52 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_min(size_t a, size_t b)
-{
-	if (a > b)
-		return (b);
-	return (a);
-}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
