@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:02:58 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/11 10:26:54 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/14 11:01:09 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalpha(int c)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	return (ft_isupper(c) || ft_islower(c));
 }
