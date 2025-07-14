@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 09:40:05 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/14 10:01:12 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/14 11:42:00 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,7 @@ int	ft_putlnbr_fd(long n, int fd)
 	int				res;
 	unsigned long	nbr;
 
-	if (n < 0)
-		nbr = (unsigned long)(n * -1);
-	else
-		nbr = (unsigned long)n;
+	nbr = n;
 	if (n < 0)
 	{
 		if (write(fd, "-", 1) == -1)
