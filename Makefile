@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/07/14 11:04:30 by nluchini         ###   ########.fr        #
+#    Updated: 2025/07/14 13:26:47 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,8 @@ SRC_FIlES =		ft_atoi.c \
 				ft_putstr_fd.c \
 				ft_putnstr_fd.c \
 				ft_putlnbr_fd.c \
+				ft_putlnbr_base_fd.c\
+				ft_putulnbr_base_fd.c\
 				ft_split.c \
 				ft_strchr.c \
 				ft_strdup.c \

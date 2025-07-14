@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 09:40:05 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/14 11:49:02 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/14 13:24:55 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,16 @@ int	ft_putlnbr_fd(long n, int fd)
 	char			*base;
 
 	nbr = n;
+	if (n < 0)
+	{
+		if(ft_putchar_fd('-', fd) == -1)
+			return (-1);
+	}
 	base = "0123456789";
-	ft_putulnbr_base_fd(nbr, base, fd);
+	res = ft_putulnbr_base_fd(nbr, base, fd);
+	if (res == -1)
+		return (-1);
+	return (res + 1);
 }
 
 // #include <stdio.h>

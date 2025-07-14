@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base_fd.c                                :+:      :+:    :+:   */
+/*   ft_putulnbr_base_fd.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 11:21:50 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/14 11:41:30 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/14 13:24:08 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,11 +65,3 @@ int	ft_putulnbr_base_fd(unsigned long nbr, char *base, int fd)
 	return (print_base_fd(nbr, len_base, base, fd));
 }
 
-int	ft_putlnbr_base_fd(long nbr, char *base, int fd)
-{
-	int				len_base;
-	unsigned long	ln;
-
-	ln = nbr;
-	return (ft_putulnbr_base_fd(ln, base, fd));
-}
