@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:24:52 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/14 10:39:37 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/14 11:44:53 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -415,6 +415,26 @@ int		ft_putlnbr_fd(long n, int fd);
  * @retval The number of written characters or -1 if an error.
  */
 int		ft_putnbr_fd(int n, int fd);
+
+/**
+ * @brief  Outputs the unsigned long ’nbr’ to the specified file descriptor
+ * with a specified base.
+ * @param  nbr: The integer to output.
+ * @param  base: The base of number to output. 
+ * @param  fd: The file descriptor on which to write.
+ * @retval The number of written characters or -1 if an error.
+ */
+int		ft_putulnbr_base_fd(unsigned long nbr, char *base, int fd);
+
+/**
+ * @brief  Outputs the long ’nbr’ to the specified file descriptor
+ * with a specified base.
+ * @param  nbr: The integer to output.
+ * @param  base: The base of number to output. 
+ * @param  fd: The file descriptor on which to write.
+ * @retval The number of written characters or -1 if an error.
+ */
+int		ft_putlnbr_base_fd(long nbr, char *base, int fd);
 
 /**
  * @brief  Return the minimal number of given two.
