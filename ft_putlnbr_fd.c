@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putlnbr_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/04 14:57:32 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/14 10:03:39 by nluchini         ###   ########.fr       */
+/*   Created: 2025/07/14 09:40:05 by nluchini          #+#    #+#             */
+/*   Updated: 2025/07/14 10:01:12 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <limits.h>
 #include "libft.h"
 
-static int	putnbr(long nb, int fd)
+static int	putnbr(unsigned long nb, int fd)
 {
 	char	out;
 	int		res;
@@ -34,21 +34,34 @@ static int	putnbr(long nb, int fd)
 	return (res + 1);
 }
 
-int	ft_putnbr_fd(int n, int fd)
+int	ft_putlnbr_fd(long n, int fd)
 {
-	long	new_int;
-	int		res;
+	int				res;
+	unsigned long	nbr;
 
-	new_int = n;
-	if (new_int < 0)
+	if (n < 0)
+		nbr = (unsigned long)(n * -1);
+	else
+		nbr = (unsigned long)n;
+	if (n < 0)
 	{
 		if (write(fd, "-", 1) == -1)
 			return (-1);
-		res = putnbr(new_int * -1, fd);
+		res = putnbr(nbr, fd);
 		if (res == -1)
 			return (-1);
 		return (res + 1);
 	}
 	else
-		return (putnbr(new_int, fd));
+		return (putnbr(nbr, fd));
 }
+
+// #include <stdio.h>
+// #include <limits.h>
+// #include <string.h>
+// int main()
+// {
+// 	int res = ft_putlnbr_fd(LONG_MIN, 1);
+// 	printf("\nRes: %d\n", res);
+// 	printf("Strlen: %d\n", strlen("-9223372036854775808"));
+// }
