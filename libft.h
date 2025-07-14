@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:24:52 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/14 10:07:37 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/14 10:39:37 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,20 @@ int		ft_isdigit(int c);
  * @retval Return zero if character is not printable
  */
 int		ft_isprint(int c);
+
+/**
+ * @brief  Check if character is lowercase.
+ * @param  c: Current character.
+ * @retval Return 1 if character is lowercase othewise 0.
+ */
+int		ft_islower(int c);
+
+/**
+ * @brief  Check if character is uppercase.
+ * @param  c: Current character.
+ * @retval Return 1 if character is uppercase othewise 0.
+ */
+int		ft_isupper(int c);
 
 /**
  * @brief  The function looking for the first occurrence of c
