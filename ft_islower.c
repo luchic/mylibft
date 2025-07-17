@@ -6,13 +6,13 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 10:33:45 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/14 10:37:32 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/15 21:00:27 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	islower(int c)
+int	ft_islower(int c)
 {
 	unsigned char	ch;
 

@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 10:33:26 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/14 10:37:11 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/15 20:59:20 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	ft_isupper(int c)
 {
-	unsigned char	ch;
-
-	ch = (unsigned char) c;
-	return (ch >= 'A' && ch <= 'Z');
+	return (c >= 'A' && c <= 'Z');
 }
