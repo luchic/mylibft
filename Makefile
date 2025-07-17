@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/07/14 13:26:47 by nluchini         ###   ########.fr        #
+#    Updated: 2025/07/16 16:21:59 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,8 +71,11 @@ SRC_BONUS = 	ft_lstadd_back_bonus.c \
 
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
+#Include
+HEADER = ../includes
+
 # Compiler and flags
-CC_FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 CC = cc
 
 all : $(OBJ_FIlES)
@@ -85,7 +88,7 @@ bonus : $(OBJ_FIlES) $(OBJ_BONUS)
 	ar rcs $(NAME) $(OBJ_FIlES) $(OBJ_BONUS)
 
 %.o : %.c
-	$(CC) $(CC_FLAGS) -o $@ -c $<
+	$(CC) $(CFLAGS) -I $(HEADER) -o $@ -c $<
 
 re : fclean all
 
