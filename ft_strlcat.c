@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 10:55:21 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/08 18:58:41 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/15 09:13:42 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	size_t	counter;
 	size_t	size_dest;
 	size_t	size_src;
-	size_t	saved_size;
 
 	size_src = ft_strlen(src);
 	if (dstsize == 0)
@@ -26,7 +25,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstsize)
 	counter = 0;
 	while (dest[counter] != '\0')
 		counter++;
-	saved_size = counter;
 	while (*src != '\0' && counter < dstsize - 1)
 	{
 		dest[counter] = *src;
