@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 09:40:05 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/14 13:24:55 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/14 14:28:48 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,18 @@ int	ft_putlnbr_fd(long n, int fd)
 	char			*base;
 
 	nbr = n;
+	base = "0123456789";
 	if (n < 0)
 	{
-		if(ft_putchar_fd('-', fd) == -1)
+		nbr = ((unsigned long)-(n + 1) + 1);
+		if (ft_putchar_fd('-', fd) == -1)
 			return (-1);
+		res = ft_putulnbr_base_fd(nbr, base, fd);
+		if (res == -1)
+			return (-1);
+		return (res + 1);
 	}
-	base = "0123456789";
-	res = ft_putulnbr_base_fd(nbr, base, fd);
-	if (res == -1)
-		return (-1);
-	return (res + 1);
+	return (ft_putulnbr_base_fd(nbr, base, fd));
 }
 
 // #include <stdio.h>
@@ -36,7 +38,8 @@ int	ft_putlnbr_fd(long n, int fd)
 // #include <string.h>
 // int main()
 // {
-// 	int res = ft_putlnbr_fd(LONG_MIN, 1);
+// 	long num = LONG_MIN;
+// 	int res = ft_putlnbr_fd(num, 1);
+// 	printf("\n%ld\n", num);
 // 	printf("\nRes: %d\n", res);
-// 	printf("Strlen: %d\n", strlen("-9223372036854775808"));
 // }
