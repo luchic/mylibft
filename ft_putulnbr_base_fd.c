@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 11:21:50 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/14 13:24:08 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/18 14:41:25 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,7 @@ int	ft_putulnbr_base_fd(unsigned long nbr, char *base, int fd)
 	len_base = ft_strlen(base);
 	if (ft_isgood_base(base) || len_base <= 1)
 		return (-1);
-
 	if (nbr == 0)
 		return (write(fd, "0", 1));
 	return (print_base_fd(nbr, len_base, base, fd));
 }
-
