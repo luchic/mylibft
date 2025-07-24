@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/07/16 16:21:59 by nluchini         ###   ########.fr        #
+#    Updated: 2025/07/24 10:27:05 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,13 +78,9 @@ HEADER = ../includes
 CFLAGS = -Wall -Wextra -Werror
 CC = cc
 
-all : $(OBJ_FIlES)
-	ar rcs $(NAME) $(OBJ_FIlES)
+all : $(NAME)
 
-$(NAME) : $(OBJ_FIlES)
-	ar rcs $(NAME) $(OBJ_FIlES)
-
-bonus : $(OBJ_FIlES) $(OBJ_BONUS)
+$(NAME) : $(OBJ_FIlES) $(OBJ_BONUS)
 	ar rcs $(NAME) $(OBJ_FIlES) $(OBJ_BONUS)
 
 %.o : %.c
@@ -98,4 +94,4 @@ fclean : clean
 clean : 
 	rm -f $(OBJ_FIlES) $(OBJ_BONUS)
 
-.PHONY: all clean fclean re bonus 
+.PHONY: all clean fclean re 
