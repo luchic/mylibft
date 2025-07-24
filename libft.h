@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:24:52 by nluchini          #+#    #+#             */
-/*   Updated: 2025/07/14 11:44:53 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/07/24 10:38:34 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,22 @@ void	ft_bzero(void *s, size_t n);
  * @retval void pointer to block of memory.
  */
 void	*ft_calloc(size_t count, size_t size);
+
+/**
+ * @brief  This function attempts to reallocate the memory block pointed to by
+ *   ptr that was previously allocated with malloc(), calloc() or realloc().
+ *   The previsous memory is freed.
+ *   The new size of the memory block is specified by new_size.
+ * @note   If ptr is NULL, the function behaves like malloc() and allocates
+ *   a new memory block of size new_size.
+ *   If malloc() fails to allocate the requested memory, the function returns
+ *   NULL and the original memory doesn't freed and remains allocated.
+ * @param  ptr: The pointer to the previously allocated memory block.
+ * @param  old_size: The size of the previously allocated memory block.
+ * @param  new_size: The new size of the memory block to be allocated.
+ * @retval Pointer to the newly allocated memory block.
+ */
+void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 
 /**
  * @brief Check if character is alpha or digit.
