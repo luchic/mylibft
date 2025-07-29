@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/07/29 13:29:58 by nluchini         ###   ########.fr        #
+#    Updated: 2025/07/29 14:06:53 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = libft.a
 
 # Src
 SRC = src
-CORE = core
+ROOT = core
 
 LIBFT_CORE_FILES =	ft_atoi.c \
 					ft_bzero.c \
@@ -71,8 +71,56 @@ LIBFT_CORE_FILES =	ft_atoi.c \
 					ft_lstsize_bonus.c
 
 # Core library
-CORE_FIlES = $(addprefix $(SRC)/$(CORE)/, $(LIBFT_CORE_FILES))
+CORE_FIlES = $(addprefix $(SRC)/$(ROOT)/, $(LIBFT_CORE_FILES))
 CORE_OBJ_FIlES = $(CORE_FIlES:.c=.o)
+
+# Ft_printf
+PATH_PRINTF = ft_printf
+
+PARSER = 		$(SRC)/$(PATH_PRINTF)/parser
+PRINTER = 		$(SRC)/$(PATH_PRINTF)/printer
+TOOLS = 		$(SRC)/$(PATH_PRINTF)/tools
+CORE = 			$(SRC)/$(PATH_PRINTF)/core
+
+# Src files
+
+## Core
+PRINTF_CORE = 	$(CORE)/ft_vfprintf_fd.c \
+			$(CORE)/ft_printf.c
+OBJ_CORE = 	$(SRC_CORE:.c=.o)
+
+## Parser
+SRC_PARSER = 	$(PARSER)/ft_parser.c
+OBJ_PARSER = 	$(SRC_PARSER:.c=.o)
+
+## Printer
+SRC_PRINTER = 	$(PRINTER)/ft_printer.c \
+				$(PRINTER)/ft_print_integer.c \
+				$(PRINTER)/ft_print_pointer.c \
+				$(PRINTER)/ft_print_string.c \
+				$(PRINTER)/ft_print_uinteger.c
+OBJ_PRINTER = 	$(SRC_PRINTER:.c=.o)
+
+## Tools
+SRC_TOOLS = 	$(TOOLS)/ft_number_utils.c \
+				$(TOOLS)/ft_format_utils.c \
+				$(TOOLS)/ft_flag_parser.c \
+				$(TOOLS)/ft_format_validator.c \
+				$(TOOLS)/ft_platform_utils.c \
+				$(TOOLS)/ft_ptr_format.c
+OBJ_TOOLS = 	$(SRC_TOOLS:.c=.o)
+
+## All Src files
+SRC_PRINTF = $(SRC_CORE)
+SRC_PRINTF += $(SRC_PARSER)
+SRC_PRINTF += $(SRC_PRINTER)
+SRC_PRINTF += $(SRC_TOOLS)
+
+## All Object files
+OBJ_PRINTF = $(OBJ_CORE)
+OBJ_PRINTF += $(OBJ_PARSER)
+OBJ_PRINTF += $(OBJ_PRINTER)
+OBJ_PRINTF += $(OBJ_TOOLS)
 
 #Include
 HEADER = includes
@@ -83,8 +131,8 @@ CC = cc
 
 all : $(NAME)
 
-$(NAME) : $(CORE_OBJ_FIlES)
-	ar rcs $(NAME) $(CORE_OBJ_FIlES)
+$(NAME) : $(CORE_OBJ_FIlES) $(OBJ_PRINTF)
+	ar rcs $(NAME) $(CORE_OBJ_FIlES) $(OBJ_PRINTF)
 
 %.o : %.c
 	$(CC) $(CFLAGS) -I $(HEADER) -o $@ -c $<
@@ -95,6 +143,6 @@ fclean : clean
 	rm -f $(NAME) 
 
 clean : 
-	rm -f $(CORE_OBJ_FIlES)
+	rm -f $(CORE_OBJ_FIlES) $(OBJ_PRINTF)
 
 .PHONY: all clean fclean re 
