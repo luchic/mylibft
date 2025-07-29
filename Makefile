@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/07/24 10:27:05 by nluchini         ###   ########.fr        #
+#    Updated: 2025/07/29 13:20:32 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,10 +72,10 @@ SRC_BONUS = 	ft_lstadd_back_bonus.c \
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 #Include
-HEADER = ../includes
+HEADER = includes
 
 # Compiler and flags
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I$(HEADER) 
 CC = cc
 
 all : $(NAME)
