@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/07/29 14:06:53 by nluchini         ###   ########.fr        #
+#    Updated: 2025/08/10 20:57:56 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ ROOT = core
 LIBFT_CORE_FILES =	ft_atoi.c \
 					ft_bzero.c \
 					ft_calloc.c \
+					ft_realloc.c \
 					ft_isalnum.c \
 					ft_isalpha.c \
 					ft_isascii.c \
@@ -53,6 +54,7 @@ LIBFT_CORE_FILES =	ft_atoi.c \
 					ft_strlen.c \
 					ft_strmapi.c \
 					ft_strncmp.c \
+					ft_strcmp.c \
 					ft_strnstr.c \
 					ft_strrchr.c \
 					ft_strtrim.c \
@@ -86,8 +88,8 @@ CORE = 			$(SRC)/$(PATH_PRINTF)/core
 
 ## Core
 PRINTF_CORE = 	$(CORE)/ft_vfprintf_fd.c \
-			$(CORE)/ft_printf.c
-OBJ_CORE = 	$(SRC_CORE:.c=.o)
+				$(CORE)/ft_printf.c
+PROBJ_CORE = 	$(PRINTF_CORE:.c=.o)
 
 ## Parser
 SRC_PARSER = 	$(PARSER)/ft_parser.c
@@ -111,13 +113,13 @@ SRC_TOOLS = 	$(TOOLS)/ft_number_utils.c \
 OBJ_TOOLS = 	$(SRC_TOOLS:.c=.o)
 
 ## All Src files
-SRC_PRINTF = $(SRC_CORE)
+SRC_PRINTF += $(PRINTF_CORE)
 SRC_PRINTF += $(SRC_PARSER)
 SRC_PRINTF += $(SRC_PRINTER)
 SRC_PRINTF += $(SRC_TOOLS)
 
 ## All Object files
-OBJ_PRINTF = $(OBJ_CORE)
+OBJ_PRINTF += $(PROBJ_CORE)
 OBJ_PRINTF += $(OBJ_PARSER)
 OBJ_PRINTF += $(OBJ_PRINTER)
 OBJ_PRINTF += $(OBJ_TOOLS)
