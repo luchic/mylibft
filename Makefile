@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/08/10 20:57:56 by nluchini         ###   ########.fr        #
+#    Updated: 2025/08/19 18:56:00 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,7 +88,8 @@ CORE = 			$(SRC)/$(PATH_PRINTF)/core
 
 ## Core
 PRINTF_CORE = 	$(CORE)/ft_vfprintf_fd.c \
-				$(CORE)/ft_printf.c
+				$(CORE)/ft_printf.c \
+				$(CORE)/ft_printf_fd.c
 PROBJ_CORE = 	$(PRINTF_CORE:.c=.o)
 
 ## Parser
@@ -124,6 +125,13 @@ OBJ_PRINTF += $(OBJ_PARSER)
 OBJ_PRINTF += $(OBJ_PRINTER)
 OBJ_PRINTF += $(OBJ_TOOLS)
 
+## Get Next Line
+GNL = $(SRC)/get_next_line
+
+GNL_SRC =	$(GNL)/get_next_line.c \
+			$(GNL)/get_next_line_utils.c
+GNL_OBJ = $(GNL_SRC:.c=.o)
+
 #Include
 HEADER = includes
 
@@ -133,8 +141,8 @@ CC = cc
 
 all : $(NAME)
 
-$(NAME) : $(CORE_OBJ_FIlES) $(OBJ_PRINTF)
-	ar rcs $(NAME) $(CORE_OBJ_FIlES) $(OBJ_PRINTF)
+$(NAME) : $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ)
+	ar rcs $(NAME) $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ)
 
 %.o : %.c
 	$(CC) $(CFLAGS) -I $(HEADER) -o $@ -c $<
@@ -145,6 +153,6 @@ fclean : clean
 	rm -f $(NAME) 
 
 clean : 
-	rm -f $(CORE_OBJ_FIlES) $(OBJ_PRINTF)
+	rm -f $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ)
 
 .PHONY: all clean fclean re 
