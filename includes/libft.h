@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:24:52 by nluchini          #+#    #+#             */
-/*   Updated: 2025/08/19 13:37:11 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/08/30 16:40:14 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,14 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+/**
+ * @brief Function converts the initial portion of the string
+ * pointed to by str to int representation.
+ * @param  str: String converting to int.
+ * @retval The converted value or 0 on error.
+ */
+double				ft_atof(const char *str);
 
 /**
  * @brief Function converts the initial portion of the string

@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/08/19 18:56:00 by nluchini         ###   ########.fr        #
+#    Updated: 2025/08/30 16:40:18 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRC = src
 ROOT = core
 
 LIBFT_CORE_FILES =	ft_atoi.c \
+					ft_atof.c \
 					ft_bzero.c \
 					ft_calloc.c \
 					ft_realloc.c \
