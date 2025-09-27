@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:24:52 by nluchini          #+#    #+#             */
-/*   Updated: 2025/09/27 13:45:05 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/09/27 13:47:56 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ int					ft_isalnum(int c);
  * @retval Returns zero if the character tests false and returns non-zero
  * if the character tests true.
  */
-int	ft_isspace(int c);
+int					ft_isspace(int c);
 
 /**
  * @brief	Check if character is alpha.
