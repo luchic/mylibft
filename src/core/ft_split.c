@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/04 14:40:13 by nluchini          #+#    #+#             */
-/*   Updated: 2025/09/27 13:47:32 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/10/16 14:10:28 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static char	*ft_strndup(const char *str, int n)
 	int		count;
 
 	count = 0;
-	cpy = malloc(sizeof(char) * (n + 1));
+	cpy = ft_malloc(sizeof(char) * (n + 1));
 	if (!cpy)
 		return (NULL);
 	while (count < n)
@@ -64,17 +64,17 @@ static char	*ft_strndup(const char *str, int n)
 	return (cpy);
 }
 
-static void	*ft_free(char **res, size_t num)
+static void	*__ft_free(char **res, size_t num)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < num)
 	{
-		free(res[i]);
+		ft_free(res[i]);
 		i++;
 	}
-	free(res);
+	ft_free(res);
 	return (NULL);
 }
 
@@ -86,7 +86,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	res = (char **)malloc((ft_count_word(s, c) + 1) * sizeof(char *));
+	res = (char **)ft_malloc((ft_count_word(s, c) + 1) * sizeof(char *));
 	if (!res)
 		return (NULL);
 	i = 0;
@@ -100,7 +100,7 @@ char	**ft_split(char const *s, char c)
 		}
 		res[i] = ft_strndup(s, wlen);
 		if (!res[i])
-			return (ft_free(res, i));
+			return (__ft_free(res, i));
 		i++;
 		s += wlen;
 	}

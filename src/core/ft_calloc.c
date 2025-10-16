@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 09:44:35 by nluchini          #+#    #+#             */
-/*   Updated: 2025/09/27 13:47:35 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/10/16 14:07:12 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_calloc(size_t count, size_t size)
 	if ((count && size > ULONG_MAX / count))
 		return (NULL);
 	total = count * size;
-	res = malloc(total);
+	res = ft_malloc(total);
 	if (!res)
 		return (NULL);
 	ft_memset(res, 0, total);

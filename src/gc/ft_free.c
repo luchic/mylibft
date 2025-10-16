@@ -6,12 +6,11 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 10:43:25 by nluchini          #+#    #+#             */
-/*   Updated: 2025/10/16 10:48:09 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/10/16 14:18:11 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_utils.h"
 #include <stdlib.h>
 
 void	ft_free(void *ptr)

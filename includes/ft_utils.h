@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 15:43:36 by nluchini          #+#    #+#             */
-/*   Updated: 2025/10/16 10:43:08 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/10/16 14:15:50 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,5 @@ void			ft_null_check(void *ptr, t_format *cur);
 int				ft_size_ptr(void *ptr, t_format *cur);
 int				ft_print_nullptr(void *ptr, int fd);
 int				ft_puthex_fd(unsigned long num, int fd);
-
-// ========= GC utils =========
-t_list			**get_memory(void);
 
 #endif

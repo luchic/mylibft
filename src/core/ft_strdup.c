@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 21:01:20 by nluchini          #+#    #+#             */
-/*   Updated: 2025/09/27 13:47:29 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/10/16 14:06:42 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 	char	*copy;
 
 	size = ft_strlen(s1);
-	copy = (char *)malloc((size + 1) * sizeof(char));
+	copy = (char *)ft_malloc((size + 1) * sizeof(char));
 	if (!copy)
 		return (NULL);
 	ft_memcpy(copy, s1, size);

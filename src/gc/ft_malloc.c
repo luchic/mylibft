@@ -6,12 +6,24 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 10:43:13 by nluchini          #+#    #+#             */
-/*   Updated: 2025/10/16 10:48:10 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/10/16 14:18:06 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_utils.h"
 #include "libft.h"
+#include <stdlib.h>
+
+static t_list	*__ft_lstnew(void *content)
+{
+	t_list	*new_node;
+
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
+}
 
 void	*ft_malloc(size_t size)
 {
@@ -25,7 +37,7 @@ void	*ft_malloc(size_t size)
 	if (!ptr)
 		return (NULL);
 	memory = get_memory();
-	new_node = ft_lstnew(ptr);
+	new_node = __ft_lstnew(ptr);
 	if (!new_node)
 	{
 		free(ptr);
