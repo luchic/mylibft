@@ -6,7 +6,7 @@
 /*   By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/02 12:24:52 by nluchini          #+#    #+#             */
-/*   Updated: 2025/09/27 13:47:56 by nluchini         ###   ########.fr       */
+/*   Updated: 2025/10/16 11:04:33 by nluchini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -602,4 +602,25 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
  * * NULL: there is nothing else to read, or an error occurred.
  */
 char				*get_next_line(int fd);
+
+/**
+ * @brief Custom malloc that tracks allocated memory.
+ * @param size Size of memory to allocate.
+ * @return void* Pointer to the allocated memory.
+ */
+void				*ft_malloc(size_t size);
+
+/**
+ * @brief  Frees the allocated memory.
+ * @return None.
+ */
+void				ft_clean(void);
+
+/**
+ * @brief  Frees the specified pointer and removes it from tracking list.
+ * @param  ptr: Pointer to memory that will be freed.
+ * @return None.
+ */
+void				ft_free(void *ptr);
+
 #endif
