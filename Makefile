@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/09/27 13:45:44 by nluchini         ###   ########.fr        #
+#    Updated: 2025/10/16 10:50:51 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -127,12 +127,25 @@ OBJ_PRINTF += $(OBJ_PARSER)
 OBJ_PRINTF += $(OBJ_PRINTER)
 OBJ_PRINTF += $(OBJ_TOOLS)
 
+
 ## Get Next Line
 GNL = $(SRC)/get_next_line
 
 GNL_SRC =	$(GNL)/get_next_line.c \
 			$(GNL)/get_next_line_utils.c
 GNL_OBJ = $(GNL_SRC:.c=.o)
+
+
+# GC Files
+GC = $(SRC)/gc
+GC_FILES =	$(GC)/ft_malloc.c \
+			$(GC)/ft_free.c \
+			$(GC)/ft_clean.c \
+			$(GC)/ft_container.c
+GC_OBJ = $(GC_FILES:.c=.o)			
+
+
+# ----------------------------------------------------------
 
 #Include
 HEADER = includes
@@ -143,8 +156,8 @@ CC = cc
 
 all : $(NAME)
 
-$(NAME) : $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ)
-	ar rcs $(NAME) $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ)
+$(NAME) : $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ) $(GC_OBJ)
+	ar rcs $(NAME) $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ) $(GC_OBJ)
 
 %.o : %.c
 	$(CC) $(CFLAGS) -I $(HEADER) -o $@ -c $<
