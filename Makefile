@@ -6,7 +6,7 @@
 #    By: nluchini <nluchini@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/07 13:35:53 by nluchini          #+#    #+#              #
-#    Updated: 2025/09/27 13:45:44 by nluchini         ###   ########.fr        #
+#    Updated: 2025/10/16 10:54:51 by nluchini         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,7 +91,8 @@ CORE = 			$(SRC)/$(PATH_PRINTF)/core
 ## Core
 PRINTF_CORE = 	$(CORE)/ft_vfprintf_fd.c \
 				$(CORE)/ft_printf.c \
-				$(CORE)/ft_printf_fd.c
+				$(CORE)/ft_printf_fd.c \
+				$(CORE)/ft_log_fd.c
 PROBJ_CORE = 	$(PRINTF_CORE:.c=.o)
 
 ## Parser
@@ -138,13 +139,21 @@ GNL_OBJ = $(GNL_SRC:.c=.o)
 HEADER = includes
 
 # Compiler and flags
-CFLAGS = -Wall -Wextra -Werror -I$(HEADER) 
+CFLAGS = -Wall -Wextra -Werror -I$(HEADER)
+DFLAGS = -I$(HEADER) -g -D DEFLOG_LEVEL=0
+
 CC = cc
 
 all : $(NAME)
 
 $(NAME) : $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ)
 	ar rcs $(NAME) $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ)
+
+debug:
+	$(MAKE) CFLAGS="$(DFLAGS)" $(NAME)
+
+debug-re:
+	$(MAKE) CFLAGS="$(DFLAGS)" re
 
 %.o : %.c
 	$(CC) $(CFLAGS) -I $(HEADER) -o $@ -c $<
@@ -157,4 +166,4 @@ fclean : clean
 clean : 
 	rm -f $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ)
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re debug debug-re
