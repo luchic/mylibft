@@ -167,6 +167,6 @@ fclean : clean
 	rm -f $(NAME) 
 
 clean : 
-	rm -f $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ)
+	rm -f $(CORE_OBJ_FIlES) $(OBJ_PRINTF) $(GNL_OBJ) $(GC_OBJ)
 
 .PHONY: all clean fclean re debug debug-re
